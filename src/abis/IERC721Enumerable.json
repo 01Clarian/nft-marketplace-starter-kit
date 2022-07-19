@@ -1,0 +1,435 @@
+{
+  "contractName": "IERC721Enumerable",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_index",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenByIndex",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_index",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenOfOwnerByIndex",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.15+commit.e14f2714\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"}],\"name\":\"tokenByIndex\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"}],\"name\":\"tokenOfOwnerByIndex\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"tokenByIndex(uint256)\":{\"details\":\"Throws if `_index` >= `totalSupply()`.\",\"params\":{\"_index\":\"A counter less than `totalSupply()`\"},\"returns\":{\"_0\":\"The token identifier for the `_index`th NFT,  (sort order not specified)\"}},\"tokenOfOwnerByIndex(address,uint256)\":{\"details\":\"Throws if `_index` >= `balanceOf(_owner)` or if  `_owner` is the zero address, representing invalid NFTs.\",\"params\":{\"_index\":\"A counter less than `balanceOf(_owner)`\",\"_owner\":\"An address where we are interested in NFTs owned by them\"},\"returns\":{\"_0\":\"The token identifier for the `_index`th NFT assigned to `_owner`,   (sort order not specified)\"}},\"totalSupply()\":{\"returns\":{\"_0\":\"A count of valid NFTs tracked by this contract, where each one of  them has an assigned and queryable owner not equal to the zero address\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"tokenByIndex(uint256)\":{\"notice\":\"Enumerate valid NFTs\"},\"tokenOfOwnerByIndex(address,uint256)\":{\"notice\":\"Enumerate NFTs assigned to an owner\"},\"totalSupply()\":{\"notice\":\"Count NFTs tracked by this contract\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/src/contracts/interfaces/IERC721Enumerable.sol\":\"IERC721Enumerable\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/src/contracts/interfaces/IERC721Enumerable.sol\":{\"keccak256\":\"0x357195506f4d428c61d91b4468675e57a997a9f13e2fcc1fd2888c280b83f004\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://92b1b180d0cd6f67c0bcce24f74c623c63692bd34938ecc6be28b3595e454fb1\",\"dweb:/ipfs/QmeTwR9WSE3wXwr9S9VsZgD8i5NwPovPM8uHHeXv1wrQ3F\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ninterface IERC721Enumerable /* is ERC721 */ {\n    /// @notice Count NFTs tracked by this contract\n    /// @return A count of valid NFTs tracked by this contract, where each one of\n    ///  them has an assigned and queryable owner not equal to the zero address\n    function totalSupply() external view returns (uint256);\n\n    /// @notice Enumerate valid NFTs\n    /// @dev Throws if `_index` >= `totalSupply()`.\n    /// @param _index A counter less than `totalSupply()`\n    /// @return The token identifier for the `_index`th NFT,\n    ///  (sort order not specified)\n    function tokenByIndex(uint256 _index) external view returns (uint256);\n\n    /// @notice Enumerate NFTs assigned to an owner\n    /// @dev Throws if `_index` >= `balanceOf(_owner)` or if\n    ///  `_owner` is the zero address, representing invalid NFTs.\n    /// @param _owner An address where we are interested in NFTs owned by them\n    /// @param _index A counter less than `balanceOf(_owner)`\n    /// @return The token identifier for the `_index`th NFT assigned to `_owner`,\n    ///   (sort order not specified)\n    function tokenOfOwnerByIndex(address _owner, uint256 _index) external view returns (uint256);\n}",
+  "sourcePath": "/home/aviroxi/workspace/nft/src/contracts/interfaces/IERC721Enumerable.sol",
+  "ast": {
+    "absolutePath": "project:/src/contracts/interfaces/IERC721Enumerable.sol",
+    "exportedSymbols": {
+      "IERC721Enumerable": [
+        684
+      ]
+    },
+    "id": 685,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 659,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:23:8"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IERC721Enumerable",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 684,
+        "linearizedBaseContracts": [
+          684
+        ],
+        "name": "IERC721Enumerable",
+        "nameLocation": "67:17:8",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 660,
+              "nodeType": "StructuredDocumentation",
+              "src": "107:209:8",
+              "text": "@notice Count NFTs tracked by this contract\n @return A count of valid NFTs tracked by this contract, where each one of\n  them has an assigned and queryable owner not equal to the zero address"
+            },
+            "functionSelector": "18160ddd",
+            "id": 665,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "totalSupply",
+            "nameLocation": "330:11:8",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 661,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "341:2:8"
+            },
+            "returnParameters": {
+              "id": 664,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 663,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 665,
+                  "src": "367:7:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 662,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "367:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "366:9:8"
+            },
+            "scope": 684,
+            "src": "321:55:8",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 666,
+              "nodeType": "StructuredDocumentation",
+              "src": "382:239:8",
+              "text": "@notice Enumerate valid NFTs\n @dev Throws if `_index` >= `totalSupply()`.\n @param _index A counter less than `totalSupply()`\n @return The token identifier for the `_index`th NFT,\n  (sort order not specified)"
+            },
+            "functionSelector": "4f6ccce7",
+            "id": 673,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "tokenByIndex",
+            "nameLocation": "635:12:8",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 669,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 668,
+                  "mutability": "mutable",
+                  "name": "_index",
+                  "nameLocation": "656:6:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 673,
+                  "src": "648:14:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 667,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "648:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "647:16:8"
+            },
+            "returnParameters": {
+              "id": 672,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 671,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 673,
+                  "src": "687:7:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 670,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "687:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "686:9:8"
+            },
+            "scope": 684,
+            "src": "626:70:8",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 674,
+              "nodeType": "StructuredDocumentation",
+              "src": "702:434:8",
+              "text": "@notice Enumerate NFTs assigned to an owner\n @dev Throws if `_index` >= `balanceOf(_owner)` or if\n  `_owner` is the zero address, representing invalid NFTs.\n @param _owner An address where we are interested in NFTs owned by them\n @param _index A counter less than `balanceOf(_owner)`\n @return The token identifier for the `_index`th NFT assigned to `_owner`,\n   (sort order not specified)"
+            },
+            "functionSelector": "2f745c59",
+            "id": 683,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "tokenOfOwnerByIndex",
+            "nameLocation": "1150:19:8",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 679,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 676,
+                  "mutability": "mutable",
+                  "name": "_owner",
+                  "nameLocation": "1178:6:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 683,
+                  "src": "1170:14:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 675,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1170:7:8",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 678,
+                  "mutability": "mutable",
+                  "name": "_index",
+                  "nameLocation": "1194:6:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 683,
+                  "src": "1186:14:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 677,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1186:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1169:32:8"
+            },
+            "returnParameters": {
+              "id": 682,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 681,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 683,
+                  "src": "1225:7:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 680,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1225:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1224:9:8"
+            },
+            "scope": 684,
+            "src": "1141:93:8",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 685,
+        "src": "57:1179:8",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:1204:8"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.15+commit.e14f2714.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.8",
+  "updatedAt": "2022-07-18T17:38:03.831Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "tokenByIndex(uint256)": {
+        "details": "Throws if `_index` >= `totalSupply()`.",
+        "params": {
+          "_index": "A counter less than `totalSupply()`"
+        },
+        "returns": {
+          "_0": "The token identifier for the `_index`th NFT,  (sort order not specified)"
+        }
+      },
+      "tokenOfOwnerByIndex(address,uint256)": {
+        "details": "Throws if `_index` >= `balanceOf(_owner)` or if  `_owner` is the zero address, representing invalid NFTs.",
+        "params": {
+          "_index": "A counter less than `balanceOf(_owner)`",
+          "_owner": "An address where we are interested in NFTs owned by them"
+        },
+        "returns": {
+          "_0": "The token identifier for the `_index`th NFT assigned to `_owner`,   (sort order not specified)"
+        }
+      },
+      "totalSupply()": {
+        "returns": {
+          "_0": "A count of valid NFTs tracked by this contract, where each one of  them has an assigned and queryable owner not equal to the zero address"
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "tokenByIndex(uint256)": {
+        "notice": "Enumerate valid NFTs"
+      },
+      "tokenOfOwnerByIndex(address,uint256)": {
+        "notice": "Enumerate NFTs assigned to an owner"
+      },
+      "totalSupply()": {
+        "notice": "Count NFTs tracked by this contract"
+      }
+    },
+    "version": 1
+  }
+}
