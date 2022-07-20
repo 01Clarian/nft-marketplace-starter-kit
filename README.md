@@ -1,3 +1,18 @@
+# NFT minting machine
+
+### How to get started
+1. Clone git repository
+2. `npm i`
+3. start ganache
+4. `truffle compile`
+5. `truffle migrate`
+6. `npm start`
+7. open `localhost:3000` and in the input field enter an image link ending with .png or .jpg etc
+8. click mint
+9. Refresh the page
+10. Bhoom your NFT is minted!!
+
+
 # nft-marketplace-starter-kit
 Please run npm install on the terminal to download the appropriate packages already defined to the package.json file. 
 Make sure you are in the source file. 

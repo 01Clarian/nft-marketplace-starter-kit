@@ -1,0 +1,17 @@
+.token{
+    padding: 1rem;
+    margin: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.7) !important;
+    border-radius: 0.75rem;
+    background-color: #141e27;
+    color: white;
+}
+
+
+.holder{
+    padding: 20px !important;
+}
+
+body{
+    background-color: #070a0e;
+}
