@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import Web3 from 'web3';
 import detectEthereumProvider from '@metamask/detect-provider';
 import Nft from '../abis/Nft.json'
+import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardImage, MDBCardText, MDBBtn } from 'mdb-react-ui-kit';
+import './App.css'
 
 export default class App extends Component {
 
@@ -62,14 +64,14 @@ export default class App extends Component {
 
   }
 
-  mint = (nft) => {
+  mint = async(nft) => {
     console.log('new NFT that is being minted that is:', nft)
     console.log('this is new contract:', this.state.contract)
-    this.state.contract.methods.mint(nft).send({ from: this.state.account })
+    await this.state.contract.methods.mint(nft).send({ from: this.state.account })
     this.setState({
       nfts: [...this.state.nfts, nft]
     })
-    console.log("inside the mint function:",this.state.nfts)
+    console.log("inside the mint function:", this.state.nfts)
   }
   render() {
     return (
@@ -108,7 +110,29 @@ export default class App extends Component {
                 </form>
               </div>
             </main>
-
+          </div>
+          <hr></hr>
+          <div className='row text-center'>
+            <div className='holder' style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
+              {this.state.nfts.map((nft, key) => {
+                return (
+                  <div>
+                    <MDBCard className='token img' style={{maxWidth:'15rem',maxHeight:'20rem'}}>
+                      <MDBCardImage src={nft}/>
+                      <MDBCardBody>
+                        <MDBCardTitle>
+                          $500
+                        </MDBCardTitle>
+                        <MDBCardText>
+                          Credit NFT worth $500 for sale at $480.
+                        </MDBCardText>
+                        <MDBBtn>Buy for $480</MDBBtn>
+                      </MDBCardBody>
+                    </MDBCard>
+                  </div>
+                )
+              })}
+            </div>
 
           </div>
 
