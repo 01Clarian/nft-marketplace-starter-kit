@@ -57,7 +57,7 @@ contract('Nft', (accounts) => {
             let result = []
             let nft
             for (i = 1; i <= totalSupply; i++) {
-                nft = await contract.nfts(i - 1)
+                nft = await contract.allNfts(i - 1)
                 result.push(nft)
             }
             let expected = ['avi','avi1','avi2','avi3']
